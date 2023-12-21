@@ -7,9 +7,11 @@
 
 @foreach ($posts as $post)
 <p>
-    <strong>{{ $post['id'] }}</strong>
-    <a href="{{ route('blog-post', $post['slug']) }}">{{ $post['title'] }}</a>
+    <strong>{{ $post->id }}</strong>
+    <a href="{{ route('blog-post', $post->slug) }}">{{ $post->title }}</a>
 </p>
-
 @endforeach
+
+{{ $posts->links() }}
+
 @endSection

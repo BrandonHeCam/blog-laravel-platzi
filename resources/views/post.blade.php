@@ -1,10 +1,10 @@
 @extends('layouts.template')
 
-@section('title', 'Post Name')
+@section('title')
+{{ $post->title }}
+@endSection
 
 @section('content')
-
-<h1>Detalle del post</h1>
-<p>{{ $post }}</p>
-
+<h1>{{ $post->title }}</h1>
+<p>{{ $post->body }}</p>
 @endSection
